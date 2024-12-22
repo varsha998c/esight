@@ -7,6 +7,34 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+        ],
+    });
+    $("#hamburgerMenu").click(function () {
+        $(".nav-links").toggleClass("active");
+    });
+    $(document).click(function (e) {
+        if (!$(e.target).closest("#hamburgerMenu, .nav-links").length) {
+            $(".nav-links").removeClass("active");
+        }
     });
 });
 $(".one-time").slick({

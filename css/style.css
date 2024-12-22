@@ -54,6 +54,7 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    transition-duration: 0.3s;
 }
 
 html,
@@ -106,6 +107,7 @@ header nav .nav-links {
     align-items: center;
     justify-content: space-between;
     list-style-type: none;
+    transition: right 0.3s ease;
 }
 
 header nav .nav-links li {
@@ -177,7 +179,6 @@ header nav .nav-links li a:hover {
 /* Services Section */
 .services {
     padding: 90px 50px;
-    height: 100vh;
     background-color: #f9f9f9;
 }
 
@@ -489,6 +490,7 @@ blockquote {
     color: #f9f9f9;
     font-weight: 700;
     font-family: "Nunito";
+    margin-bottom: 10px;
     font-size: 50px;
 }
 
@@ -644,25 +646,276 @@ footer .social-media a i:hover {
     color: #1baaa0;
 }
 /* responsive */
+/* 1280px and below */
 @media all and (max-width: 1280px) {
+    .hero .left h1 {
+        font-size: 48px;
+    }
+
+    .service-card {
+        width: 45%;
+        height: unset;
+    }
+
+    .article-card {
+        width: 45%;
+    }
+
+    .testimonial_section {
+        width: 700px;
+    }
+    .contact .contact_left h2 {
+        margin-bottom: 20px;
+    }
 }
+
+/* 1080px and below */
 @media all and (max-width: 1080px) {
+    .hero {
+        padding: 30px;
+        height: auto;
+    }
+
+    .hero .right .ImgContainer {
+        width: 450px;
+    }
+
+    .services {
+        height: auto;
+        padding: 60px 30px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact .contact_left,
+    .contact .contact_right {
+        width: 100%;
+    }
 }
 
+/* 980px and below */
 @media all and (max-width: 980px) {
+    header nav .nav-links {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero .left,
+    .hero .right {
+        width: 100%;
+    }
+
+    .hero .right {
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 40%;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .features .features-list {
+        flex-wrap: wrap;
+    }
+
+    .article-card {
+        width: 100%;
+        height: auto;
+    }
 }
+
+/* 768px and below */
 @media all and (max-width: 768px) {
+    .testimonial_section {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .contact_right .elementor-widget-container {
+        width: 100%;
+    }
+
+    .contact_right
+        .elementor-widget-container
+        ul.elementor-icon-list-items
+        .elementor-icon-list-item {
+        width: 45%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer .social-media,
+    .footer .quick-links {
+        width: 100%;
+    }
+    .card-content h3.title {
+        font-size: 20px;
+    }
+    .why-choose-us p.desc {
+        font-size: 18px;
+    }
+    .card-content .dummy {
+        font-size: 18px;
+    }
 }
 
+/* 640px and below */
 @media all and (max-width: 640px) {
+    .hero .left h1 {
+        font-size: 36px;
+    }
+    .service-card {
+        width: 80%;
+    }
+    .services h2,
+    .why-choose-us h2,
+    .testimonial h2,
+    .contact .contact_left h2 {
+        font-size: 32px;
+    }
+
+    .why-choose-us p.desc {
+        width: 100%;
+        font-size: 16px;
+    }
+    .contact .contact_left form .form_Details input,
+    textarea {
+        width: 70%;
+    }
+    .contact_right
+        .elementor-widget-container
+        ul.elementor-icon-list-items
+        .elementor-icon-list-item {
+        width: 44%;
+    }
 }
 
-@media all and (max-width: 540px) {
-}
+/* 480px and below */
 @media all and (max-width: 480px) {
+    header {
+        height: 70px;
+    }
+
+    header nav .logoContainer {
+        width: 120px;
+    }
+
+    .hero .right .ImgContainer {
+        width: 100%;
+    }
+
+    .contact .contact_left form .form_Details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact .contact_left form .form_Details input,
+    .contact .contact_left form .form_Details textarea {
+        width: 100%;
+    }
+    .contact_right
+        .elementor-widget-container
+        ul.elementor-icon-list-items
+        .elementor-icon-list-item {
+        width: 42%;
+    }
+    .testimonial,
+    .why-choose-us {
+        padding: 50px 50px;
+    }
+    .testimonial_section {
+        height: unset;
+    }
+    .testimonial_section:last-child {
+        margin-bottom: 0px;
+    }
+    .service-card {
+        width: 100%;
+    }
+    .contact_right
+        .elementor-widget-container
+        ul.elementor-icon-list-items
+        .elementor-icon-list-item
+        a
+        .elementor-icon-list-text {
+        font-size: 16px;
+    }
+    .contact {
+        padding: 50px 33px;
+    }
+    .footer {
+        padding: 10px;
+    }
 }
 
+/* 360px and below */
 @media all and (max-width: 360px) {
+    .hero .left h1 {
+        font-size: 28px;
+    }
+
+    .testimonial_section img.client {
+        width: 150px;
+        height: 150px;
+    }
+
+    .testimonial_section div.overlay {
+        width: 150px;
+        height: 150px;
+    }
 }
-@media all and (max-width: 320px) {
+/* Add these after your reset styles */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-links.active li {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slick-track {
+    display: flex !important;
+    gap: 20px !important;
+}
+
+@media (max-width: 980px) {
+    .slick-track {
+        gap: 10px !important;
+    }
 }
