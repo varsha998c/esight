@@ -29,8 +29,10 @@ $(document).ready(function () {
         ],
     });
     $("#hamburgerMenu").click(function () {
+        $(this).toggleClass("active");
         $(".nav-links").toggleClass("active");
     });
+
     $(document).click(function (e) {
         if (!$(e.target).closest("#hamburgerMenu, .nav-links").length) {
             $(".nav-links").removeClass("active");
